@@ -1,0 +1,61 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Cute Compliment App
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .title {
+            font-family: 'Pacifico', cursive;
+        }
+  </style>
+ </head>
+ <body class="bg-pink-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-lg text-center max-w-md w-full">
+   <h1 class="title text-4xl text-pink-600 mb-4">
+    Cute Compliment App
+   </h1>
+   <img alt="Cute illustration of a heart with a smiley face" class="mx-auto mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/gydaRY2aEAvD4Ta4faRtMOWJayQSiOIRbyv2WvZEGqc.jpg" width="300"/>
+   <p class="text-lg text-gray-700 mb-6" id="compliment">
+    Click the button to get a cute compliment!
+   </p>
+   <button class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 transition duration-300" onclick="generateCompliment()">
+    <i class="fas fa-heart mr-2">
+    </i>
+    Get Compliment
+   </button>
+  </div>
+  <script>
+   const compliments = [
+            "You have the best smile!",
+            "You're an amazing friend.",
+            "You light up the room.",
+            "You have a great sense of humor.",
+            "You're so thoughtful.",
+            "You have a heart of gold.",
+            "You're a true gift to the people in your life.",
+            "You're an incredible person.",
+            "You bring out the best in other people.",
+            "You're a ray of sunshine.",
+            "You're a wonderful listener.",
+            "You have a beautiful soul.",
+            "You're a joy to be around.",
+            "You make the world a better place.",
+            "You're one of a kind!"
+        ];
+
+        function generateCompliment() {
+            const randomIndex = Math.floor(Math.random() * compliments.length);
+            document.getElementById('compliment').innerText = compliments[randomIndex];
+        }
+  </script>
+ </body>
+</html>
